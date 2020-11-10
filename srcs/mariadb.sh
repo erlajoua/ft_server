@@ -11,6 +11,9 @@ echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
 #end mariadb
 
 #start moving
+rm /var/www/html/index.nginx-debian.html
+mv ./index.html /var/www/html/
+
 mv ./default /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
