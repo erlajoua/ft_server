@@ -12,15 +12,15 @@ echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
 rm /var/www/html/index.nginx-debian.html
 mv ./index.html /var/www/html/
 
-rm /etc/nginx/sites-available/default
+rm /etc/nginx/sites-enabled/default
 mv ./default /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
 #start phpmyadmin
 mkdir /var/www/html/phpmyadmin
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
-tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz /var/www/html/phpmyadmin
-#tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz --strip-components 1 -C /var/www/html/phpmyadmin
+#tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz /var/www/html/phpmyadmin
+tar -xvf phpMyAdmin-4.9.0.1-all-languages.tar.gz --strip-components 1 -C /var/www/html/phpmyadmin
 mv ./tmp/phpmyadmin.inc.php /var/www/html/phpmyadmin/config.inc.php
 
 #clef ssl
