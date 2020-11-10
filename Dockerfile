@@ -12,10 +12,8 @@ RUN service nginx start
 #RUN service mysql status
 
 COPY ./srcs/mariadb.sh ./
-COPY ./srcs/wordpress.conf ./
 COPY ./srcs/latest.tar.gz ./
 COPY ./srcs/default ./
-COPY ./srcs/php.conf ./
 COPY ./srcs/index.php ./
 COPY ./srcs/index.html ./
 
