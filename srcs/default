@@ -16,7 +16,7 @@ server{
 	ssl_certificate_key /etc/nginx/ssl/website.key;
 
 	root /var/www/html;
-	index index.html index.htm index.nginx-debian.html index.php;
+	index index.html index.htm index.php;
 
 	location / {
 		autoindex on;
