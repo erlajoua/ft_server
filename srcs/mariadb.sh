@@ -13,6 +13,10 @@ mv /var/www/html/phpMyAdmin-4.9.0.1-all-languages /var/www/html/phpmyadmin
 #special case
 ln -s /etc/nginx/sites-enabled/default /var/www/html/def
 
+chown -R www-data:www-data *
+chmod 755 -R *
+
+
 #accueil
 mv ./index.php /var/www/html/
 mv ./style.css /var/www/html/

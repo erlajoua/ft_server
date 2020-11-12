@@ -41,9 +41,12 @@
     	}
    	 else if (isset($_POST['OFF']))
    	 {
-   	    	 $txt = '<span class="txt">OFF</span>';
-	 	echo(shell_exec("sed -i 's/autoindex on/autoindex off/g' /var/www/html/default"));
-		 echo(shell_exec("sed -i 's/index index.html index.htm index.php/index index.html index.htm/g' /var/www/html/default"));
+		$txt = '<span class="txt" style="margin-bottom:10px;">OFF, maintenant il faut restart nginx</span>
+			 <div style="margin-left:40%;width:265px;" class="div_prompt">
+			 <span class="prompt">service nginx restart</span>
+			</div>';
+		 echo(shell_exec("sed -i 's/autoindex on/autoindex off/g' /etc/nginx/sites-enabled/default"));
+		 echo(shell_exec("sed -i 's/index index.html index.htm index.php/index index.html index.htm/g' /etc/nginx/sites-enabled/default"));
 
 	 }
     	echo $txt;
