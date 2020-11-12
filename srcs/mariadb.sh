@@ -39,5 +39,6 @@ sed -i 's/username_here/wpuser/g' /var/www/html/wordpress/wp-config.php ;
 sed -i 's/password_here/dbpassword/g' /var/www/html/wordpress/wp-config.php ;
 service nginx restart
 service php7.3-fpm restart
+cd /etc/nginx/sites-enabled/
 
 bash
