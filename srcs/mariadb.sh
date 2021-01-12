@@ -27,7 +27,6 @@ mkdir /etc/nginx/ssl
 openssl req -newkey rsa:4096 -x509 -sha256 -days 1 -nodes -out /etc/nginx/ssl/website.pem -keyout /etc/nginx/ssl/website.key -subj "/C=FR/ST=Paris/L=Paris/O=42 School/OU=erlajoua/CN=website"
 
 #config 
-mv ./tmp/phpmyadmin.inc.php /var/www/html/phpmyadmin/config.inc.php
 cp /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
 sed -i 's/database_name_here/wpdb/g' /var/www/html/wordpress/wp-config.php ;
 sed -i 's/username_here/wpuser/g' /var/www/html/wordpress/wp-config.php ;

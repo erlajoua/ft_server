@@ -33,28 +33,14 @@
             </div>
             <span class="txt">et vice-versa.</span>  
         </div>
-	<h3 style="margin-top:5%;">___________________________________________</h3>
-	<?php
-    	if (!isset($_POST['ON']) && !isset($_POST['OFF']))
-   	 {
-   	    	 $txt = '<span class="txt">ON</span>';
-    	}
-   	 else if (isset($_POST['OFF']))
-   	 {
-		$txt = '<span class="txt" style="margin-bottom:10px;">OFF, maintenant il faut restart nginx</span>
+		<p>
+			Pour faire cela, lancez le script off.sh situé à la racine. sh /off.sh
+		</p>
+		<span class="txt" style="margin-bottom:10px;"></span>
 			 <div style="margin-left:40%;width:265px;" class="div_prompt">
 			 <span class="prompt">service nginx restart</span>
-			</div>';
-		 echo(shell_exec("sed -i 's/autoindex on/autoindex off/g' /etc/nginx/sites-enabled/default"));
-		 echo(shell_exec("sed -i 's/index index.html index.htm index.php/index index.html index.htm/g' /etc/nginx/sites-enabled/default"));
+			</div>
 
-	 }
-    	echo $txt;
-    	?>
-        <form action="" method="post">
-            <input type="submit" value="ON" name="ON" class="button">
-            <input type="submit" value="OFF" name="OFF" class="button">
-        </form>
     </div>
     <div id="pink">
         <span class="error">403</span>
@@ -66,3 +52,4 @@
     </div>
 </body>
 </html>
+
