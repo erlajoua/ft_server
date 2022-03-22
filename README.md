@@ -34,6 +34,6 @@ sudo chmod 777 /var/run/docker.sock
 ```
 _(if a port of your machine is already in use, try)_
 ```
-docker run -it -p 8042:80 -p 444:443 nameOfYourContainer
+docker run -it -p 8042:80 -p 443:443 nameOfYourContainer
 ```
 you can change the left port of the combination in this example `8042`.
