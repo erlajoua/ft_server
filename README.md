@@ -12,6 +12,10 @@ The Wordpress is using the MySQL data base, and is available from the PhpMyAdmin
 
 The ports `80` and `443` are used, respectively for the web access and the SSL.
 
+**The secrets logs of the wordpress are:**
+`wpuser`
+`dbpassword`
+
 ### Main purpose :page_facing_up:
 The objective of this project was to discover the docker technology, and what a container is.
 Then to learn how to organize the container to run the 3 services at the same time, set up its own web server, and link wordpress, mysql and phpmyadmin together.
